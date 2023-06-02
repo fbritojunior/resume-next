@@ -7,10 +7,10 @@ export const data = {
         { type: 'email', value: 'fbritojnr@gmail.com' },
         { type: 'phone', value: '+55 (85) 99960-3519' },
         { type: 'location', value: 'Brasil' },
-        { type: 'website', value: 'example.com' },
-        { type: 'linkedin', value: 'linkedin.com/in/notexists' },
+        { type: 'website', value: 'fbritojunior.github.io' },
+        { type: 'linkedin', value: 'linkedin.com/in/fbritojunior' },
         { type: 'twitter', value: 'twitter.com/404' },
-        { type: 'github', value: 'github.com/404' }
+        { type: 'github', value: 'github.com/fbritojunior' }
       ]
     },
     sections: [
