@@ -9,7 +9,6 @@ export const data = {
         { type: 'location', value: 'Brasil' },
         { type: 'website', value: 'fbritojunior.github.io' },
         { type: 'linkedin', value: 'linkedin.com/in/fbritojunior' },
-        { type: 'twitter', value: 'twitter.com/404' },
         { type: 'github', value: 'github.com/fbritojunior' }
       ]
     },
