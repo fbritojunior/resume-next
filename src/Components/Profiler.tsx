@@ -20,8 +20,8 @@ function ContactList(props: any) {
             {props.items.map((item) => {
                 const icon = iconMap[item.type] || faExclamation;
                 return <div className={''}>
-                    <FontAwesomeIcon icon={icon} className={'w-8'} />
-                    <a className={''} href={item.value} target='_blank'>
+                    <FontAwesomeIcon icon={icon} className={'w-6'} />
+                    <a className={''} href={item.ref + item.value} target='_blank'>
                         {item.value}
                     </a>
                 </div>
@@ -43,7 +43,7 @@ export default function Profile(props: IComponentProps) {
         <div className='flex flex-wrap'>
             <div>
                 <figure className={'w-128 h-128'}>
-                    <img className={'rounded-lg'} src={props.image} />
+                    <img className={'rounded-full'} src={props.image} />
                 </figure>
             </div>
             <div className={'flex items-center'}>

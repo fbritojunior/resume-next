@@ -1,15 +1,15 @@
 export const data = {
-    personalData: {
+    personal: {
       name: 'Francisco Brito Jr',
       title: 'Software Developer',
       image: 'https://bulma.io/images/placeholders/128x128.png',
       contacts: [
-        { type: 'email', value: 'fbritojnr@gmail.com' },
-        { type: 'phone', value: '+55 (85) 99960-3519' },
-        { type: 'location', value: 'Brasil' },
-        { type: 'website', value: 'fbritojunior.github.io' },
-        { type: 'linkedin', value: 'linkedin.com/in/fbritojunior' },
-        { type: 'github', value: 'github.com/fbritojunior' }
+          { type: 'email', value: 'fbritojnr@gmail.com', link: 'mailto:' },
+          { type: 'phone', value: '+55 (85) 99960-3519', link: 'tel:' },
+          { type: 'location', value: 'Fortaleza - CE, Brasil', link: 'http://maps.google.com/?q' },
+          { type: 'website', value: 'fbritojunior.github.io', link: 'https://' },
+          { type: 'linkedin', value: 'linkedin.com/in/fbritojunior', link: 'https://www.' },
+          { type: 'github', value: 'github.com/fbritojunior', link: 'https://www.' }
       ]
     },
     sections: [
