@@ -3,12 +3,6 @@
 import { data } from '../data/data';
 import Profile from '@/Components/Profiler';
 
-type ComponentPropsx = {
-    name: string,
-    title: string,
-    contacts: string,
-    image: string,
-};
 
 export default function Home() {
 
@@ -16,10 +10,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <Profile 
-            name={data.personal.name} 
-            title={data.personal.title} 
-            contacts={data.personal.contacts} 
-            image={data.personal.image} 
+            name = {data.personal.name} 
+            title = {data.personal.title} 
+            contacts = {data.personal.contacts} 
+            image = {data.personal.image} 
         />
         
       </div>

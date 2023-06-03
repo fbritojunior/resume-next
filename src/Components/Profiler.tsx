@@ -2,26 +2,26 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faGlobeAmericas, faExclamation, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { Icon, IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 const iconMap = {
     email: faEnvelope,
     phone: faPhone,
     location: faMapMarkerAlt,
     website: faGlobeAmericas,
-    linkedin: faLinkedin,
+    linkedin: faLinkedin, 
     github: faGithub,
     twitter: faTwitter
 };
 
-function ContactList(props: any) {
-    //console.log(props.items);
+function ContactList(props: { items: { type: string; value: string | undefined; link: any; }[]; } ) {
     return (
         <div className={''}>
-            {props.items.map((item) => {
-                const icon = iconMap[item.type] || faExclamation;
+            { props.items.map((item: { type: string; link: any; value: string | undefined; }) => {
+                const icon = (iconMap as Record<string, IconDefinition | undefined>)[item.type] || faExclamation;
                 return <div className={''}>
                     <FontAwesomeIcon icon={icon} className={'w-6'} />
-                    <a className={''} href={item.ref + item.value} target='_blank'>
+                    <a className={''} href={item.link + item.value} target='_blank'>
                         {item.value}
                     </a>
                 </div>
@@ -30,14 +30,20 @@ function ContactList(props: any) {
     )
 }
 
-interface IComponentProps {
+interface IProfile {
     name: string,
     title: string,
-    contacts: {},
+    contacts: Array<IContacts>,
     image: string,
 };
 
-export default function Profile(props: IComponentProps) {
+interface IContacts {
+    type: string,
+    value: string,
+    link: string
+;}
+
+export default function Profile(props: IProfile) {
 
     return (
         <div className='flex flex-wrap'>
@@ -53,7 +59,7 @@ export default function Profile(props: IComponentProps) {
             <div className={'level-right'}>
                 <div className={'level-item'}>
                     <ContactList
-                        items={props.contacts}
+                        items = {props.contacts}
                     />
                 </div>
             </div>
