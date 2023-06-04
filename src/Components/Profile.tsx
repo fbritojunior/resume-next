@@ -1,16 +1,29 @@
-import React from 'react';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone, faGlobeAmericas, faExclamation, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { Icon, IconDefinition, IconProp } from '@fortawesome/fontawesome-svg-core';
+import { faBook, faGraduationCap, faArchive, faRocket, faTasks, faComment, faLanguage, faCubes, faUserTie } from '@fortawesome/free-solid-svg-icons'
+import { IProfile } from './IProfile';
 
-export default function Profile (props: any) {
 
-    return ( 
-        <div className=''>
-            {props.description.map((d: { title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; content: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; }) => {
+const preIcon = {
+    usertie: faUserTie
+}
+
+export default function Profile(props: IProfile) {
+    console.log(props.description);
+    return (
+        <div className='w-full max-w-5xl'>
+            {props.description.map((d) => {
+                const icon = (preIcon as Record<string, IconDefinition>)[d.icon];
                 return (
                     <div>
-                        <div className='text-white text-lg'>
+                        <FontAwesomeIcon icon={icon} className={'inline w-4'} />
+                        <div className='text-black text-lg'>
                             {d.title}
                         </div>
-                        <div className='text-white text-sm'>
+                        <div className='text-black text-sm p-3'>
                             {d.content}
                         </div>
                     </div>
