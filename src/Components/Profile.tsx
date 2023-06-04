@@ -12,16 +12,20 @@ const preIcon = {
 }
 
 export default function Profile(props: IProfile) {
-    console.log(props.description);
+    //console.log(props.description);
     return (
         <div className='w-full max-w-5xl'>
             {props.description.map((d) => {
                 const icon = (preIcon as Record<string, IconDefinition>)[d.icon];
                 return (
                     <div>
-                        <FontAwesomeIcon icon={icon} className={'inline w-4'} />
-                        <div className='text-black text-lg'>
-                            {d.title}
+                        <div className='inline-block items-center justify-center '>
+                            <figure className='rounded-full items-center justify-center bg-blue-700 w-8 h-8'>
+                                <FontAwesomeIcon icon={icon} className={'inline w-4'} />
+                            </figure>
+                            <div className='text-black text-lg'>
+                                {d.title}
+                            </div>
                         </div>
                         <div className='text-black text-sm p-3'>
                             {d.content}
