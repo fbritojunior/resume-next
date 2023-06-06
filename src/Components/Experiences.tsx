@@ -1,11 +1,11 @@
 import React from "react";
-import { IExperiences } from "./IExperiences";
+import { IExperiences, IList } from "./IExperiences";
 
 
-function ExperienceList(props: { listitems: { datesBetween: string; title: string; companyWebSite: string; company: string; description: string; descriptionTags: any[]; }[]; }) {
+function ExperienceList(props: { listitems: IList[] }) {
     return (
         <div className={''}>
-            {props.listitems.map((item: { datesBetween: string; title: string; companyWebSite: string; company: string; description: string; descriptionTags: any[]; }, index: number) => (
+            {props.listitems.map((item, index) => (
                     <div className={'flex'} key={index}>
                         <div className="px-12">
                             {item.datesBetween}
@@ -17,7 +17,7 @@ function ExperienceList(props: { listitems: { datesBetween: string; title: strin
                             </a>
                             <div>{item.description}</div>
 
-                            {item.descriptionTags.map((element: string, innerIndex: number) =>  (
+                            {item.descriptionTags.map((element, innerIndex) =>  (
                                     <span key={innerIndex}>{element}</span>
                                 )
                             )}
@@ -33,7 +33,7 @@ function ExperienceList(props: { listitems: { datesBetween: string; title: strin
 export default function Experiences(props: IExperiences) {
     return (
         <div className=' flex justify-start items-center'>
-            {props.experiences.map((e, index) => {
+            {props.listexperiences.map((e, index) => {
                 {/*const icon = (preIcon as Record<string, IconDefinition>)[d.icon];*/ }
                 return (
                     <div key={index}>

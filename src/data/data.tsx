@@ -14,13 +14,13 @@ export const data = {
         ]
     },
     sections: [
-        {
+        {profile : {
             type: 'profile',
             title: 'Profile',
             content: 'I am passionate about developing solutions. I love working in a challenging and continuously learning environment.',
             icon: 'usertie'
-        },
-        {
+        }},
+        {education: {
             type: 'common-list',
             title: 'Education',
             icon: 'graduation',
@@ -38,8 +38,9 @@ export const data = {
                     rightSide: '2007 - 2010'
                 }
             ]
-        },
+        }},
         {
+            listexperiences: {
             type: 'experiences-list',
             title: 'Experiences',
             description: 'Optional',
@@ -64,7 +65,7 @@ export const data = {
                     descriptionTags: ['Javascript', 'C#', 'Oracle']
                 }
             ]
-        },
+        }},
         {
             type: 'projects-list',
             title: 'Projects',

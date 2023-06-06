@@ -26,7 +26,7 @@ export default function Home() {
             </section>
             <section className='w-full max-w-6xl py-12'>
                 <Experiences
-                    experiences={data.sections.filter(i => i.type === 'experiences-list')}
+                    listexperiences={data.sections.map(e => e.listexperiences)} //filter(i => i.type === 'experiences-list')
                 />
             </section>
             

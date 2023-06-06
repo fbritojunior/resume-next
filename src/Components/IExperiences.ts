@@ -1,21 +1,30 @@
-export interface IExperiences {
-    experiences: Array<IItems>
-}
-
-interface IItems  {
+{/*export interface IExperiences {
     type: string,
     title: string,
-    description?: undefined ,
+    description: string,
     icon: string,
-    items: Array<IList>
-}
+    listexperiences: {
+        items: Array<IList>
+    }[]
+}*/}
 
-interface IList {
+export interface IList {
     title: string,
     company: string,
     description: string,
     companyWebSite: string,
     companyMeta: string,
     datesBetween: string,
-    descriptionTags: Array<[]>
+    descriptionTags: string[]
 };
+
+export interface IExperiences {
+  listexperiences: {
+    type: string;
+    title: string;
+    description: string;
+    icon: string;
+    items: 
+      IList[];
+  }[];
+}
