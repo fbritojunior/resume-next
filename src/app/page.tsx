@@ -7,7 +7,7 @@ import Experiences from '@/Components/Experiences';
 
 
 export default function Home() {
-    
+    console.log(data.sections[0].profile) 
     return (
         <main className="flex h-screen flex-col bg-slate-950 items-center justify-center p-12">
             <div className="w-full max-w-6xl items-center justify-between rounded-2xl font-mono border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
@@ -21,12 +21,12 @@ export default function Home() {
             </div>
             <section className='w-full max-w-6xl py-12'>
                 <Profile
-                    description={data.sections.filter(i => i.type === 'profile')}
+                    description = {data.sections[0].profile} //filter(i => i.type === 'profile')
                 />
             </section>
             <section className='w-full max-w-6xl py-12'>
                 <Experiences
-                    listexperiences={data.sections.map(e => e.listexperiences)} //filter(i => i.type === 'experiences-list')
+                    listexperiences = {data.sections[0].experiences} //filter(i => i.type === 'experiences-list')
                 />
             </section>
             

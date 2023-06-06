@@ -33,21 +33,16 @@ function ExperienceList(props: { listitems: IList[] }) {
 export default function Experiences(props: IExperiences) {
     return (
         <div className=' flex justify-start items-center'>
-            {props.listexperiences.map((e, index) => {
-                {/*const icon = (preIcon as Record<string, IconDefinition>)[d.icon];*/ }
-                return (
+            {props.listexperiences.map((e, index) => (
                     <div key={index}>
                         <div className='inline-block text-left '>
-                            {/*<figure className='rounded-full items-center justify-center bg-blue-700 w-8 h-8'>
-                                <FontAwesomeIcon icon={icon} className={'inline w-4'} />
-                            </figure>*/}
                             <ExperienceList
                                 listitems={e.items}
                             />
                         </div>
                     </div>
                 )
-            })}
+            )}
         </div>
     )
 }

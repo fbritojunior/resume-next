@@ -5,6 +5,6 @@ export interface IProfile {
 interface IDescription {
     type: string,
     title: string,
-    content?: string,
+    content: string,
     icon: string
 }

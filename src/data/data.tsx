@@ -13,14 +13,16 @@ export const data = {
             { type: 'github', value: 'github.com/fbritojunior', link: 'https://www.' }
         ]
     },
-    sections: [
-        {profile : {
+    sections: [{
+        profile:
+        {
             type: 'profile',
             title: 'Profile',
             content: 'I am passionate about developing solutions. I love working in a challenging and continuously learning environment.',
             icon: 'usertie'
-        }},
-        {education: {
+        },
+        education:
+        {
             type: 'common-list',
             title: 'Education',
             icon: 'graduation',
@@ -38,9 +40,9 @@ export const data = {
                     rightSide: '2007 - 2010'
                 }
             ]
-        }},
+        },
+        experiences:
         {
-            listexperiences: {
             type: 'experiences-list',
             title: 'Experiences',
             description: 'Optional',
@@ -65,7 +67,8 @@ export const data = {
                     descriptionTags: ['Javascript', 'C#', 'Oracle']
                 }
             ]
-        }},
+        },
+        projects:
         {
             type: 'projects-list',
             title: 'Projects',
@@ -81,6 +84,7 @@ export const data = {
                 }
             ]
         },
+        conference:
         {
             type: 'common-list',
             title: 'Conferences & Certificates',
@@ -105,6 +109,7 @@ export const data = {
                 }
             ]
         },
+        languages:
         {
             type: 'common-list',
             title: 'Languages',
@@ -120,17 +125,19 @@ export const data = {
                 }
             ]
         },
+        skills:
         {
             type: 'tag-list',
             title: 'Skills Proficiency',
             icon: 'rocket',
             items: ['React', 'JavaScript', 'CSS', 'SQL', 'TypeScript', 'Next.Js']
         },
+        hobbies:
         {
             type: 'tag-list',
             title: 'Hobbies & Interests',
             icon: 'cubes',
             items: ['Photography', 'Poetry']
         }
-    ]
+    }]
 }

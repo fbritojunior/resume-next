@@ -6,7 +6,7 @@ export interface IHeader {
     contacts: Array<IContacts>
 };
 
-interface IContacts {
+export interface IContacts {
     type: string,
     value: string,
     link: string

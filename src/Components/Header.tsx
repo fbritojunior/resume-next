@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faGlobeAmericas, faExclamation, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { Icon, IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { IHeader } from './IHeader';
+import { IContacts, IHeader } from './IHeader';
 
 const iconMap = {
     email: faEnvelope,
@@ -16,10 +16,10 @@ const iconMap = {
     twitter: faTwitter
 };
 
-function ContactList(props: { items: { type: string; value: string; link: string; }[]; }) {
+function ContactList(props: { items: IContacts[] }) {
     return (
         <div className={''}>
-            {props.items.map((item: { type: string; value: string; link: string; }, index: number) => {
+            {props.items.map((item, index) => {
                 const icon = (iconMap as Record<string, IconDefinition | undefined>)[item.type] || faExclamation;
                 return (
                     <div className={'flex'} key={index}>
