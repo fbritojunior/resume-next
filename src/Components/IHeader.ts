@@ -1,8 +1,9 @@
 export interface IHeader {
+    image: string,
     name: string,
     title: string,
-    contacts: Array<IContacts>,
-    image: string,
+    description: string,
+    contacts: Array<IContacts>
 };
 
 interface IContacts {

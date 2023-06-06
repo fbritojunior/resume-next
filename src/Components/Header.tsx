@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faGlobeAmericas, faExclamation, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -15,17 +16,18 @@ const iconMap = {
     twitter: faTwitter
 };
 
-function ContactList(props: { items: { type: string; value: string | undefined; link: any; }[]; }) {
+function ContactList(props: { items: { type: string; value: string; link: string; }[]; }) {
     return (
         <div className={''}>
-            {props.items.map((item: { type: string; link: any; value: string | undefined; }) => {
+            {props.items.map((item: { type: string; value: string; link: string; }, index: number) => {
                 const icon = (iconMap as Record<string, IconDefinition | undefined>)[item.type] || faExclamation;
-                return <div className={'flex'}>
-                    <FontAwesomeIcon icon={icon} className={'inline w-4'} />
-                    <a className={'inline p-2 text-sm'} href={item.link + item.value} target='_blank'>
-                        {item.value}
-                    </a>
-                </div>
+                return (
+                    <div className={'flex'} key={index}>
+                        <a className={'inline px-2 py-1 text-sm'} href={item.link + item.value} target='_blank'>
+                            <FontAwesomeIcon icon={icon} className={'inline w-5'} />{/*{item.value}*/}
+                        </a>
+                    </div>
+                )
             })}
         </div>
     )
@@ -36,14 +38,17 @@ export default function Header(props: IHeader) {
 
     return (
         <div className='flex  items-center'>
-            <div>
-                <figure className={'w-256 h-256 p-6'}>
-                    <img className={'rounded-full'} src={props.image} />
-                </figure>
-            </div>
+            <Image
+                className={'rounded-full'}
+                src={props.image}
+                height={156}
+                width={156}
+                alt={''}
+            />
             <div className={'block items-center p-6'}>
-                <h1 className={'text-white text-3xl font-bold'}>{props.name}</h1>
+                <h1 className={'text-white text-4xl font-bold'}>{props.name}</h1>
                 <h3 className={'text-white text-sm'}>{props.title}</h3>
+                <p className='text-teal-400 text-sm'>{props.description}</p>
             </div>
             <div className={''}>
                 <div className={'flex p-6 justify-end'}>

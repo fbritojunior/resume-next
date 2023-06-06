@@ -1,144 +1,135 @@
 export const data = {
     personal: {
-      name: 'Francisco Brito Jr',
-      title: 'Software Developer',
-      image: 'https://bulma.io/images/placeholders/128x128.png',
-      contacts: [
-          { type: 'email', value: 'fbritojnr@gmail.com', link: 'mailto:' },
-          { type: 'phone', value: '+55 (85) 99960-3519', link: 'tel:' },
-          { type: 'location', value: 'Fortaleza - CE, Brasil', link: 'http://maps.google.com/?q' },
-          { type: 'website', value: 'fbritojunior.github.io', link: 'https://' },
-          { type: 'linkedin', value: 'linkedin.com/in/fbritojunior', link: 'https://www.' },
-          { type: 'github', value: 'github.com/fbritojunior', link: 'https://www.' }
-      ]
+        name: 'Francisco Brito Jr',
+        title: 'Software Developer',
+        description: 'I am passionate about developing solutions. I love working in a challenging and continuously learning environment.',
+        image: '/photo.jpg',
+        contacts: [
+            { type: 'email', value: 'fbritojnr@gmail.com', link: 'mailto:' },
+            { type: 'phone', value: '+55 (85) 99960-3519', link: 'tel:' },
+            { type: 'location', value: 'Fortaleza - CE, Brasil', link: 'http://maps.google.com/?q' },
+            { type: 'website', value: 'fbritojunior.github.io', link: 'https://' },
+            { type: 'linkedin', value: 'linkedin.com/in/fbritojunior', link: 'https://www.' },
+            { type: 'github', value: 'github.com/fbritojunior', link: 'https://www.' }
+        ]
     },
     sections: [
-      {
-        type: 'profile',
-        title: 'Career Profile',
-        content: 'When I was child, I always want to be a developer. I think I am now. Culpa proident ad officia minim Lorem sint excepteur irure culpa nisi aliquip nostrud.Laborum voluptate nostrud fugiat occaecat proident veniam excepteur pariatur amet ex sit.Anim aliquip do in commodo adipisicing.Nulla adipisicing nisi enim ullamco sunt veniam.Ullamco labore sunt Lorem veniam id et Lorem magna eiusmod aute. Aliquip minim est consectetur anim mollit aliqua ex elit do et nulla do. Cupidatat ad sunt cillum sint consectetur sunt cillum eiusmod ad esse aliqua. Aute anim elit amet in duis aute ipsum deserunt qui deserunt officia excepteur veniam. Et laboris nostrud est ipsum nulla fugiat deserunt magna velit irure. Ullamco duis ut magna ea tempor enim in ipsum.',
-        icon: 'usertie'
-      },
-      {
-        type: 'common-list',
-        title: 'Education',
-        icon: 'graduation',
-        items: [
-          {
-            title: 'Computer Engineering (BS)',
-            authority: 'University',
-            authorityWebSite: 'https://sample.edu',
-            rightSide: '2013 - 2017'
-          },
-          {
-            title: 'Some Department (PHD)',
-            authority: 'Another University',
-            authorityWebSite: 'https://sample.edu',
-            rightSide: '2017 - Present'
-          }
-        ]
-      },
-      {
-        type: 'experiences-list',
-        title: 'Experiences',
-        description: 'Optional',
-        icon: 'archive',
-        items: [
-          {
-            title: 'Lead Software Developer',
-            company: 'Some Company Example INC',
-            description: 'I\'m working as a lead developer yeeeey!',
-            companyWebSite: 'http://somecompanyexample.com',
-            companyMeta: '',
-            datesBetween: '2017.10 - Present',
-            descriptionTags: ['Javascript', 'React']
-          },
-          {
-            title: 'Software Developer',
-            company: 'Some Company Example INC',
-            description: 'I\'m using ReactJS and working as a front-end developer',
-            companyWebSite: 'http://somecompanyexample.com',
-            companyMeta: 'Little info about company',
-            datesBetween: '2016.8 - 2017.10'
-          },
-          {
-            title: 'Intern',
-            company: 'Some Software Example INC',
-            description: 'I was warming up.',
-            companyWebSite: 'http://someexamplecompany.com',
-            companyMeta: 'SF USA',
-            datesBetween: '2012.06 - 2012.10'
-          }
-        ]
-      },
-      {
-        type: 'projects-list',
-        title: 'Projects',
-        description: 'Optional',
-        icon: 'tasks',
-        groups: [
-          {
-            sectionHeader: 'Company Name',
-            description: 'Optional',
+        {
+            type: 'profile',
+            title: 'Profile',
+            content: 'I am passionate about developing solutions. I love working in a challenging and continuously learning environment.',
+            icon: 'usertie'
+        },
+        {
+            type: 'common-list',
+            title: 'Education',
+            icon: 'graduation',
             items: [
-              { title: 'Project', projectUrl: 'optional', description: 'Optional' },
-              { title: 'Project', projectUrl: 'optional', description: 'Optional' },
-              { title: 'Project', projectUrl: 'optional', description: 'Optional' }
+                {
+                    title: 'Electrical Engineering (MSc)',
+                    authority: 'Federal University of Ceará',
+                    authorityWebSite: 'https://www.ufc.br',
+                    rightSide: '2011 - 2013'
+                },
+                {
+                    title: 'Industrial Automation (BTech)',
+                    authority: 'Federal Institute of Ceará',
+                    authorityWebSite: 'https://www.ifce.edu.br',
+                    rightSide: '2007 - 2010'
+                }
             ]
-          }
-        ]
-      },
-      {
-        type: 'common-list',
-        title: 'Conferences & Certificates',
-        description: '',
-        icon: 'comments',
-        items: [
-          {
-            title: 'Some Conferences / 2019',
-            authority: 'SomeConf',
-            authorityWebSite: 'https://www.someconf.somesome'
-          },
-          {
-            title: 'Some Conferences / 2019',
-            authority: 'SomeConf',
-            authorityMeta: 'Speaker',
-            authorityWebSite: 'https://www.someconf.somesome',
-            rightSide: 'test'
-          },
-          {
-            title: 'Some Conferences / 2012',
-            authorityMeta: 'Speaker'
-          }
-        ]
-      },
-      {
-        type: 'common-list',
-        title: 'Languages',
-        icon: 'language',
-        items: [
-          {
-            authority: 'English',
-            authorityMeta: 'Professional'
-          },
-          {
-            authority: 'Spanish',
-            authorityMeta: 'Beginner'
-          }
-        ]
-      },
-      {
-        type: 'tag-list',
-        title: 'Skills Proficiency',
-        icon: 'rocket',
-        items: ['React', 'Javascript', 'CSS', 'SQL', 'SomeTech', 'CoolTech']
-      },
-      {
-        type: 'tag-list',
-        title: 'Hobbies & Interests',
-        icon: 'cubes',
-        items: ['Photography', 'Poetry']
-      }
+        },
+        {
+            type: 'experiences-list',
+            title: 'Experiences',
+            description: 'Optional',
+            icon: 'archive',
+            items: [
+                {
+                    title: 'Software Developer',
+                    company: 'Escola de Saúde Pública',
+                    description: 'I\'m working as a lead developer yeeeey!',
+                    companyWebSite: 'http://www.esp.ce.gov.br',
+                    companyMeta: '',
+                    datesBetween: '07/2022 - Present',
+                    descriptionTags: ['Javascript', 'D3.JS', 'Wordpress']
+                },
+                {
+                    title: 'Software Maintenance Analyst',
+                    company: 'Companhia Siderúrgica do Pecém',
+                    description: 'I\'m using ReactJS and working as a front-end developer',
+                    companyWebSite: 'http://www.cspecem.com/',
+                    companyMeta: '',
+                    datesBetween: '02/2021 - 02/2022',
+                    descriptionTags: ['Javascript', 'C#', 'Oracle']
+                }
+            ]
+        },
+        {
+            type: 'projects-list',
+            title: 'Projects',
+            description: 'Optional',
+            icon: 'tasks',
+            groups: [
+                {
+                    sectionHeader: 'Escola de Saúde Pública',
+                    description: 'Optional',
+                    items: [
+                        { title: 'ObsevaEPS', projectUrl: 'https://observatorio.esp.ce.gov.br/', description: 'Optional' }
+                    ]
+                }
+            ]
+        },
+        {
+            type: 'common-list',
+            title: 'Conferences & Certificates',
+            description: '',
+            icon: 'comments',
+            items: [
+                {
+                    title: 'Some Conferences / 2019',
+                    authority: 'SomeConf',
+                    authorityWebSite: 'https://www.someconf.somesome'
+                },
+                {
+                    title: 'Some Conferences / 2019',
+                    authority: 'SomeConf',
+                    authorityMeta: 'Speaker',
+                    authorityWebSite: 'https://www.someconf.somesome',
+                    rightSide: 'test'
+                },
+                {
+                    title: 'Some Conferences / 2012',
+                    authorityMeta: 'Speaker'
+                }
+            ]
+        },
+        {
+            type: 'common-list',
+            title: 'Languages',
+            icon: 'language',
+            items: [
+                {
+                    authority: 'Portuguese',
+                    authorityMeta: 'Native'
+                },
+                {
+                    authority: 'English',
+                    authorityMeta: 'Intermediate'
+                }
+            ]
+        },
+        {
+            type: 'tag-list',
+            title: 'Skills Proficiency',
+            icon: 'rocket',
+            items: ['React', 'JavaScript', 'CSS', 'SQL', 'TypeScript', 'Next.Js']
+        },
+        {
+            type: 'tag-list',
+            title: 'Hobbies & Interests',
+            icon: 'cubes',
+            items: ['Photography', 'Poetry']
+        }
     ]
-  }
-  
+}
