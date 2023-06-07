@@ -12,22 +12,22 @@ const preIcon = {
 }
 
 export default function Profile(props: IProfile) {
-    //console.log(props.description);
+    //console.log(props.itemsprofile);
     return (
         <div className=' flex justify-start items-center'>
-            {props.description.map((d, index) => {
-                const icon = (preIcon as Record<string, IconDefinition>)[d.icon];
+            {Array.isArray(props.itemsprofile) && props.itemsprofile.map((item, index) => {
+                //const icon = (preIcon as Record<string, IconDefinition>)[item.icon];
                 return (
                     <div key={index}>
                         <div className='inline-block text-left '>
                             {/*<figure className='rounded-full items-center justify-center bg-blue-700 w-8 h-8'>
                                 <FontAwesomeIcon icon={icon} className={'inline w-4'} />
                             </figure>*/}
-                            <div className='font-semibold text-lg'>
-                                {d.title}
+                            <div className='text-white font-semibold text-lg'>
+                                {item.title}
                             </div>
                         <div className=' text-sm p-3'>
-                            {d.content}
+                                {item.content}
                         </div>
                     </div>
                     </div>

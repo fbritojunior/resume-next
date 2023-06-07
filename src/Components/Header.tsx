@@ -23,7 +23,7 @@ function ContactList(props: { items: IContacts[] }) {
                 const icon = (iconMap as Record<string, IconDefinition | undefined>)[item.type] || faExclamation;
                 return (
                     <div className={'flex'} key={index}>
-                        <a className={'inline px-2 py-1 text-sm'} href={item.link + item.value} target='_blank'>
+                        <a className={'inline px-2 py-1 text-sm'} href={item.link} target='_blank'>
                             <FontAwesomeIcon icon={icon} className={'inline w-5'} />{/*{item.value}*/}
                         </a>
                     </div>

@@ -26,5 +26,5 @@ export interface IExperiences {
     icon: string;
     items: 
       IList[];
-  }[];
+  };
 }

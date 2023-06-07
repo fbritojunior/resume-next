@@ -5,7 +5,7 @@ import { IExperiences, IList } from "./IExperiences";
 function ExperienceList(props: { listitems: IList[] }) {
     return (
         <div className={''}>
-            {props.listitems.map((item, index) => (
+            {Array.isArray(props.listitems) && props.listitems.map((item, index) => (
                     <div className={'flex'} key={index}>
                         <div className="px-12">
                             {item.datesBetween}
@@ -29,11 +29,10 @@ function ExperienceList(props: { listitems: IList[] }) {
     )
 }
 
-
 export default function Experiences(props: IExperiences) {
     return (
         <div className=' flex justify-start items-center'>
-            {props.listexperiences.map((e, index) => (
+            {Array.isArray(props.listexperiences) && props.listexperiences.map((e, index) => (
                     <div key={index}>
                         <div className='inline-block text-left '>
                             <ExperienceList

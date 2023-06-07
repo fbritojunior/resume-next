@@ -1,5 +1,5 @@
-export interface IProfile {
-    description: Array<IDescription>;
+{/*export interface IProfile {
+    description: IDescription[];
 }
 
 interface IDescription {
@@ -7,4 +7,13 @@ interface IDescription {
     title: string,
     content: string,
     icon: string
+}*/}
+
+export interface IProfile {
+  itemsprofile: {
+    type: string,
+    icon: string,
+    title: string,
+    content: string
+  };
 }

@@ -8,6 +8,5 @@ export interface IHeader {
 
 export interface IContacts {
     type: string,
-    value: string,
     link: string
 };
